@@ -1,15 +1,27 @@
 {
-  "name": "vite_react_shadcn_ts",
+  "name": "hospital-asset-tracking",
+  "version": "0.1.0",
+  "description": "Asset Tracking System for Hospital Equipment - Parkwood Institute",
   "private": true,
-  "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "build:dev": "vite build --mode development",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "keywords": [
+    "asset-tracking",
+    "hospital",
+    "rfid",
+    "ble",
+    "iot",
+    "healthcare"
+  ],
+  "author": "Project Team",
+  "license": "UNLICENSED",
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",
     "@radix-ui/react-accordion": "^1.2.11",

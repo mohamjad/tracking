@@ -1,73 +1,72 @@
-# Welcome to your Lovable project
+# Hospital Asset Tracking System
 
-## Project info
+basically we're building an asset tracking system for Parkwood Institute. they have a bunch of medical equipment that moves around the hospital and they can't find it half the time. so we're gonna fix that.
 
-**URL**: https://lovable.dev/projects/7035dc92-46ef-4024-ba44-fe2560a221e6
+## what we're doing
 
-## How can I edit this code?
+tracking mobile assets like portable medical devices, maintenance equipment, carts etc. that get moved between units. the problem is:
+- takes forever to find equipment
+- stuff gets lost
+- people waste time looking for things
+- equipment doesn't get used properly
+- higher chance of theft/loss
 
-There are several ways of editing your application.
+## requirements (from the project brief)
 
-**Use Lovable**
+- tracking methods: RFID, BLE, QR codes, or whatever works
+- needs to be easy to use (minimal training)
+- privacy and infection prevention stuff
+- power management (batteries, maintenance, etc)
+- figure out if we should buy something or build it ourselves
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/7035dc92-46ef-4024-ba44-fe2560a221e6) and start prompting.
+## project structure
 
-Changes made via Lovable will be committed automatically to this repo.
+```
+tracking-a/
+├── src/                    # frontend stuff (react)
+├── software/backend/       # backend API (not built yet)
+├── hardware/              # hardware designs
+├── firmware/              # firmware code
+├── docs/                  # documentation
+└── testing/               # tests
+```
 
-**Use your preferred IDE**
+## setup
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+you need node.js and npm installed
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+```bash
+npm install
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+runs on localhost:3000
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## backend
 
-**Use GitHub Codespaces**
+we need to build a backend that does:
+- gets data from tracking devices (RFID, BLE, QR codes)
+- tracks locations in real time
+- manage assets (add/edit/delete)
+- user auth
+- analytics and reports
+- integrate with hospital systems maybe
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+haven't decided on tech stack yet. probably node.js or python. database TBD.
 
-## What technologies are used for this project?
+## other stuff to think about
 
-This project is built with:
+- privacy (HIPAA/PIPEDA compliance probably)
+- infection prevention (sanitization)
+- power management (battery life, charging stations)
+- keep it simple for staff
+- make it work with existing workflows
+- don't break the bank
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+## resources
 
-## How can I deploy this project?
+there's an article about St. Joe's Hamilton doing something similar: https://www.canhealth.com/2025/11/05/st-joes-hamilton-adopts-tech-for-equipment-tracking/
 
-Simply open [Lovable](https://lovable.dev/projects/7035dc92-46ef-4024-ba44-fe2560a221e6) and click on Share -> Publish.
+## contributing
 
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+this is a student project for Parkwood Institute. we're still figuring stuff out so things might change.
