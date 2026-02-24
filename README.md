@@ -1,4 +1,4 @@
-# espresense to aws iot bridge (simple and explicit)
+# espresense to aws iot bridge 
 
 this repo is a practical setup for:
 
@@ -7,8 +7,7 @@ this repo is a practical setup for:
 3. mosquitto bridge to aws iot core over tls
 4. clear debug scripts so you can see each step working
 
-nothing here is hidden behind frameworks. every script is short and readable.
-
+nothing here is hidden behind frameworks. 
 ## repo layout
 
 - `config/.env.example`: all values you edit
